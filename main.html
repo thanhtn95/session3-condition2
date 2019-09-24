@@ -70,11 +70,10 @@
 
         case 8:
             let inp12 = parseFloat(prompt("Nhap tuoi: "));
-            if (inp12 - Math.floor(inp12) != 0) {
-                alert("Tuoi ko hop le!!")
-            } else alert("Tuoi hop le");
+            if(inp12 >=120 || inp12 <=0 || (inp12-Math.floor(inp12))!=0){
+                alert("Tuoi khong hop le");
+            }else alert("Tuoi hop le");
             break;
-
         case 9:
             let inp13 = parseFloat(prompt("Nhap a:"));
             let inp14 = parseFloat(prompt("Nhap b: "));
