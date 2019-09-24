@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let cmd = parseInt(prompt("Chon bai toan(1-12) :"));
+    switch (cmd) {
+        case 1:
+            let inp = parseInt(prompt("Nhap gia tri do C:"));
+            inp = inp * 9 / 5 + 32;
+            alert("Gia tri nhiet do chuyen sang do F: " + inp);
+            break;
+        case 2:
+            let inp1 = parseInt(prompt("Nhap gia tri do dai met:"));
+            inp1 = inp1 * 3.2808;
+            alert("Gia tri do dai o dang feet: " + inp1);
+            break;
+        case 3:
+            let inp2 = parseInt(prompt("Nhap do dai canh a:"));
+            inp2 *= inp2;
+            alert("Dien tich hinh vuong canh a :" + inp2);
+            break;
+        case 4 :
+            let inp3 = parseInt(prompt("Nhap do dai canh a :"));
+            let inp4 = parseInt(prompt("Nhap do dai canh b: "));
+            inp3 *= inp4;
+            alert("Dien tich hinh chu nhat canh a b : " + inp3);
+            break;
+        case 5:
+            let inp5 = parseInt(prompt("Nhap do dai canh a :"));
+            let inp6 = parseInt(prompt("Nhap do dai canh b: "));
+            inp5 *= (inp4 / 2);
+            alert("Dien tich tam giac vuong canh a b : " + inp5);
+            break;
+        case 6:
+            let inp7 = parseInt(prompt("Nhap a:"));
+            let inp8 = parseInt(prompt("Nhap b: "));
+            if (inp7 == 0) {
+                alert("Phuong trinh vo nghiem !!")
+            } else if (inp8 == 0) {
+                alert("x = 0");
+            } else {
+                inp7 = -inp8 / inp7;
+                alert("x = " + inp7);
+            }
+            break;
+        case 7:
+            let inp9 = parseFloat(prompt("Nhap a:"));
+            let inp10 = parseFloat(prompt("Nhap b: "));
+            let inp11 = parseFloat(prompt("Nhap c:"));
+
+            if ((inp9 + inp10 + inp11) === 0) {
+                alert("x1 = 1 va x2 = " + inp11 / inp9);
+            } else if ((inp9 - inp10 + inp11) === 0) {
+                alert("x1 = -1 va x2 = " + (-inp11 / inp9));
+            } else {
+                let del = (inp10 * inp10) - 4 * inp9 * inp11;
+                if (del < 0) {
+                    alert("Phuong trinh vo nghiem!!!");
+                } else if (del = 0) {
+                    alert("x1 = x2 = " + (-inp10 / (2 * inp9)));
+                } else {
+                    alert("x1 = " + (-inp10 + Math.sqrt(del)) / (2 * inp9) + " va x2 = " + ((-inp10 - Math.sqrt(del)) / (2 * inp9)));
+                }
+            }
+            break;
+
+        case 8:
+            let inp12 = parseFloat(prompt("Nhap tuoi: "));
+            if (inp12 - Math.floor(inp12) != 0) {
+                alert("Tuoi ko hop le!!")
+            } else alert("Tuoi hop le");
+            break;
+
+        case 9:
+            let inp13 = parseFloat(prompt("Nhap a:"));
+            let inp14 = parseFloat(prompt("Nhap b: "));
+            let inp15 = parseFloat(prompt("Nhap c:"));
+            if ((inp13 + inp14 + inp15) > 0 && (inp13 + inp14) > inp15 && (inp13 + inp15) > inp14 && (inp14 + inp15) > inp13) {
+                alert("3 so da nhap la canh cua 1 tam giac");
+            } else alert("3 so da nhap  khong la canh cua 1 tam giac");
+            break;
+        case 10:
+            let inp16 = parseFloat(prompt("Nhap so dien da tieu thu:"));
+            let re;
+            if (inp16 > 200) {
+                re = (inp16 - 200) * 4000 + 150 * 3000 + 50 * 2000;
+
+            } else if (inp16 > 150) {
+                re = (inp16 - 150) * 3000 + 50 * 2000;
+
+            } else {
+                re = inp16 * 2000;
+
+            }
+            alert("Tien dien = " + re + "VND");
+            break;
+
+        case 11:
+            let inp17 = parseFloat(prompt("Nhap so thu nhap :"));
+            if (inp17 <= 5000000) {
+                inp17 = inp17 * 5 / 100;
+            }else if(inp17<=10000000){
+                inp17 = inp17 * 10 / 100 -250000;
+            }else if(inp17<=18000000){
+                inp17 = inp17 * 15 / 100 -750000;
+            }else if(inp17<=32000000){
+                inp17 = inp17 * 20 / 100 - 1650000;
+            }else if(inp17<=52000000){
+                inp17 = inp17 * 25 / 100 - 3250000;
+            }else if(inp17<=80000000){
+                inp17 = inp17 * 30 / 100 - 5850000;
+            }else{
+                inp17 = inp17 * 35/100 - 9850000;
+            }
+            alert("Thue thu nhap ca nhan la : "+inp17+" VND");
+            break;
+
+        case 12:
+            let inp18 = parseFloat(prompt("Nhap so tien vay:"));
+            let inp19 = parseFloat(prompt("Nhap so thang vay: "));
+            let inp20 = parseFloat(prompt("Nhap lai suat hang thang: "));
+
+            for(i =0;i<inp19;i++){
+                inp18+=inp18*inp20/100;
+            }
+            alert("So tien phai tra la : "+ inp18);
+
+    }
+</script>
+</body>
+</html>
